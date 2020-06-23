@@ -1,0 +1,13 @@
+/home/joklr/PokerCompare/PokerCompareProgram/TexasPoker/bin/Debug/netcoreapp3.1/TexasPoker
+/home/joklr/PokerCompare/PokerCompareProgram/TexasPoker/bin/Debug/netcoreapp3.1/TexasPoker.deps.json
+/home/joklr/PokerCompare/PokerCompareProgram/TexasPoker/bin/Debug/netcoreapp3.1/TexasPoker.runtimeconfig.json
+/home/joklr/PokerCompare/PokerCompareProgram/TexasPoker/bin/Debug/netcoreapp3.1/TexasPoker.runtimeconfig.dev.json
+/home/joklr/PokerCompare/PokerCompareProgram/TexasPoker/bin/Debug/netcoreapp3.1/TexasPoker.dll
+/home/joklr/PokerCompare/PokerCompareProgram/TexasPoker/bin/Debug/netcoreapp3.1/TexasPoker.pdb
+/home/joklr/PokerCompare/PokerCompareProgram/TexasPoker/obj/Debug/netcoreapp3.1/TexasPoker.csprojAssemblyReference.cache
+/home/joklr/PokerCompare/PokerCompareProgram/TexasPoker/obj/Debug/netcoreapp3.1/TexasPoker.AssemblyInfoInputs.cache
+/home/joklr/PokerCompare/PokerCompareProgram/TexasPoker/obj/Debug/netcoreapp3.1/TexasPoker.AssemblyInfo.cs
+/home/joklr/PokerCompare/PokerCompareProgram/TexasPoker/obj/Debug/netcoreapp3.1/TexasPoker.csproj.CoreCompileInputs.cache
+/home/joklr/PokerCompare/PokerCompareProgram/TexasPoker/obj/Debug/netcoreapp3.1/TexasPoker.dll
+/home/joklr/PokerCompare/PokerCompareProgram/TexasPoker/obj/Debug/netcoreapp3.1/TexasPoker.pdb
+/home/joklr/PokerCompare/PokerCompareProgram/TexasPoker/obj/Debug/netcoreapp3.1/TexasPoker.genruntimeconfig.cache
