@@ -40,6 +40,8 @@ namespace TexasPoker
                 Console.WriteLine(_pokers[i]);
             }
         }
+        
+        public Poker this[int index] => _pokers[index];
     }
 
     public class Poker : IComparable<Poker>

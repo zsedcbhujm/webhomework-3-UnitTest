@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace TexasPoker
 {
@@ -6,7 +7,8 @@ namespace TexasPoker
     {
         static void Main(string[] args)
         {
-            Pokers pokers = new Pokers(new []{"AH", "2H", "4H", "3H", "5H"});
+            Pokers pokers = new Pokers(new []{"2H", "2D", "2S", "5C", "KD"});
+            Console.WriteLine(PokerJudge.GetPokersOrder(pokers));
         }
     }
 }
