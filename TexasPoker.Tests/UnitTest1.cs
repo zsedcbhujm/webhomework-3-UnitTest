@@ -108,5 +108,42 @@ namespace TexasPoker.Tests
             yield return new object[] {new Pokers(new []{"2H", "3H", "4H", "5H", "6H"}) };
             yield return new object[] {new Pokers(new []{"5D", "6D", "7D", "8D", "9D"}) };
         }
+        
+        // 样例测试
+        [Fact]
+        public void TestDataGroup1()
+        {
+            Pokers black = new Pokers(new []{"2H", "3D", "5S", "9C", "KD"});
+            Pokers white = new Pokers(new []{"2C", "3H", "4S", "8C", "AH"});
+            
+            Assert.Equal(-1, PokerJudge.JudgeWinner(black, white));
+        }
+        
+        [Fact]
+        public void TestDataGroup2()
+        {
+            Pokers black = new Pokers(new []{"2H", "4S", "4C", "2D", "4H"});
+            Pokers white = new Pokers(new []{"2S", "8S", "AS", "QS", "3S"});
+            
+            Assert.Equal(-1, PokerJudge.JudgeWinner(black, white));
+        }
+        
+        [Fact]
+        public void TestDataGroup3()
+        {
+            Pokers black = new Pokers(new []{"2H", "3H", "5H", "9H", "KH"});
+            Pokers white = new Pokers(new []{"2C", "3H", "4S", "5C", "6H"});
+            
+            Assert.Equal(1, PokerJudge.JudgeWinner(black, white));
+        }
+        
+        [Fact]
+        public void TestDataGroup4()
+        {
+            Pokers black = new Pokers(new []{"2H", "3D", "5S", "9C", "KD"});
+            Pokers white = new Pokers(new []{"2D", "3H", "5C", "9S", "KH"});
+            
+            Assert.Equal(0, PokerJudge.JudgeWinner(black, white));
+        }
     }
 }

@@ -23,7 +23,7 @@ namespace TexasPoker
                     var exp = pokers[i];
                     if (checkRepeat.Contains(exp)) 
                         throw new Exception("Poker has repeat");
-                    _pokers.Add(new Poker(exp.ToUpper()));
+                    _pokers.Add(new Poker(exp.ToUpper().Trim()));
                     checkRepeat.Add(exp);
                 }
             }
@@ -34,11 +34,6 @@ namespace TexasPoker
             }
 
             _pokers.Sort();
-
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine(_pokers[i]);
-            }
         }
         
         public Poker this[int index] => _pokers[index];
@@ -74,6 +69,10 @@ namespace TexasPoker
             if (PokerNums.IndexOf(this.Number) == PokerNums.IndexOf(other.Number)) return 0;
             return -1;
         }
+
+        public static bool operator >(Poker self, Poker other) => self.CompareTo(other) == 1;
+
+        public static bool operator <(Poker self, Poker other) => self.CompareTo(other) == -1;
 
         public override string ToString()
         {

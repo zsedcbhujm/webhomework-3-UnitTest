@@ -21,12 +21,96 @@ namespace TexasPoker
             switch (o1)
             {
                 case PokerOrder.TongHuaShun:
-                    if (p1[4].CompareTo(p2[4]) == 1)
+                    if (p1[4] > p2[4])
                         result = 1;
-                    else if (p1[4].CompareTo(p2[4]) == -1)
+                    else if (p1[4] < p2[4])
                         result = -1; 
                     break;
+                case PokerOrder.SanPai:
                 case PokerOrder.TongHua:
+                    for (int i = 4; i >= 0; i--)
+                    {
+                        if (p1[i] > p2[i])
+                        {
+                            result = 1;
+                            break;
+                        }
+                        else if (p1[i] < p2[i])
+                        {
+                            result = -1;
+                            break;
+                        }
+                    }
+                    break;
+                case PokerOrder.ShunZi:
+                    if (p1[4] > p2[4])
+                        result = 1;
+                    else if (p1[4] < p2[4])
+                        result = -1;
+                    break;
+                case PokerOrder.SanTiao:
+                    if (Poker.PokerNums.IndexOf(CheckSanTiaoHelper(p1)[0]) >
+                        Poker.PokerNums.IndexOf(CheckSanTiaoHelper(p2)[0]))
+                        result = 1;
+                    else
+                        result = -1;
+                    break;
+                case PokerOrder.LiangDui:
+                    string s1 = CheckDuiZiHelper(p1), s2 = CheckDuiZiHelper(p2);
+                    for (int i = 1; i >= 0; i--)
+                    {
+                        if (Poker.PokerNums.IndexOf(s1[i]) > Poker.PokerNums.IndexOf(s2[i]))
+                        {
+                            result = 1;
+                            break;
+                        }
+                        else if (Poker.PokerNums.IndexOf(s1[i]) > Poker.PokerNums.IndexOf(s2[i]))
+                        {
+                            result = -1;
+                            break;
+                        }
+                    }
+
+                    if (result == 0)
+                    {
+                        for (int i = 4; i >= 0; i--)
+                        {
+                            if (p1[i] > p2[i])
+                            {
+                                result = 1;
+                                break;
+                            }
+                            else if (p1[i] < p2[i])
+                            {
+                                result = -1;
+                                break;
+                            }
+                        }
+                    }
+                    break;
+                case PokerOrder.DuiZi:
+                    string sp1 = CheckDuiZiHelper(p1), sp2 = CheckDuiZiHelper(p2);
+                    if (Poker.PokerNums.IndexOf(sp1[0]) > Poker.PokerNums.IndexOf(sp2[0]))
+                        result = 1;
+                    else if (Poker.PokerNums.IndexOf(sp1[0]) > Poker.PokerNums.IndexOf(sp2[0]))
+                        result = -1;
+
+                    if (result == 0)
+                    {
+                        for (int i = 4; i >= 0; i--)
+                        {
+                            if (p1[i] > p2[i])
+                            {
+                                result = 1;
+                                break;
+                            }
+                            else if (p1[i] < p2[i])
+                            {
+                                result = -1;
+                                break;
+                            }
+                        }
+                    }
                     break;
             }
 
